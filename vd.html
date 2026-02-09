@@ -77,6 +77,21 @@
             object-fit: contain;
         }
         
+        .video-wrapper.link-only {
+            padding-top: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+        
+        .video-wrapper.link-only .play-icon {
+            font-size: 80px;
+            color: white;
+            opacity: 0.9;
+        }
+        
         .video-info {
             padding: 20px;
         }
@@ -121,6 +136,22 @@
             background: #5568d3;
         }
         
+        .watch-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .watch-btn:hover {
+            background: #218838;
+        }
+        
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 28px;
@@ -158,21 +189,14 @@
             
             <!-- 영상 2 -->
             <div class="video-card">
-                <div class="video-wrapper">
-                   <div class="video-info">
-    <span class="video-number">영상 #2</span>
-    <h2 class="video-title">영상 제목 2</h2>
-    <p class="video-description">설명</p>
-    <a href="https://naver.me/Fso1q1Gw" target="_blank" class="download-btn">
-        ▶️ 영상 보기
-    </a>
-</div>
+                <div class="video-wrapper link-only">
+                    <div class="play-icon">▶️</div>
                 </div>
                 <div class="video-info">
                     <span class="video-number">영상 #2</span>
                     <h2 class="video-title">영상 제목 2</h2>
                     <p class="video-description">두 번째 영상에 대한 설명을 입력하세요.</p>
-                    <a href="b.mp4" download class="download-btn">📥 다운로드</a>
+                    <a href="https://naver.me/Fso1q1Gw" target="_blank" class="watch-btn">▶️ 영상 보기</a>
                 </div>
             </div>
             
@@ -226,5 +250,4 @@
         </div>
     </div>
 </body>
-
 </html>
