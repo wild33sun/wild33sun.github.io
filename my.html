@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김 - 시니어 건강 콘텐츠 크리에이터</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            background: #f5f5f5;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 20px;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: -50px auto 0;
+            padding: 0 20px 60px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card h2 {
+            font-size: 28px;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .card h3 {
+            font-size: 22px;
+            color: #555;
+            margin: 25px 0 15px;
+        }
+        
+        .card p {
+            font-size: 17px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .highlight {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+        
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .skill-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9ff;
+            border-radius: 10px;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .card {
+                padding: 25px;
+            }
+            
+            .card h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="profile-img">👨‍💻</div>
+        <h1>김</h1>
+        <p>시니어 건강 콘텐츠 크리에이터 & AI 자동화 전문가</p>
+    </div>
+    
+    <div class="container">
+        <div class="card">
+            <h2>🎯 About Me</h2>
+            <p>60~80대 시니어를 위한 건강 의료 교육 콘텐츠를 제작하는 유튜브 크리에이터입니다.</p>
+            <p>AI 음성 합성과 체계적인 제작 워크플로우를 활용해 고품질 장편 교육 영상(25-60분)을 효율적으로 제작하고 있습니다.</p>
+            
+            <div class="highlight">
+                <strong>💡 핵심 철학:</strong> 시니어 분들이 쉽게 이해할 수 있는 건강 정보를, 감정적 공감과 의학적 신뢰성을 모두 담아 전달합니다.
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>📊 실적</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <span class="stat-number">25-60</span>
+                    <span class="stat-label">분 길이 영상 제작</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">12,000+</span>
+                    <span class="stat-label">글자 스크립트 최적화</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">60-80</span>
+                    <span class="stat-label">대 타겟 연령층</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>🛠 전문 기술</h2>
+            
+            <h3>AI & 자동화 도구</h3>
+            <div class="skills">
+                <div class="skill-tag">BRU AI 음성합성</div>
+                <div class="skill-tag">Vrew 편집기</div>
+                <div class="skill-tag">AI 이미지 생성</div>
+                <div class="skill-tag">배치 자동화</div>
+            </div>
+            
+            <h3>콘텐츠 제작 시스템</h3>
+            <ul>
+                <li><strong>HookEngine:</strong> 강력한 오프닝 제작 시스템</li>
+                <li><strong>VoiceEngine:</strong> 11가지 쉼표 삽입 규칙으로 시니어 청취 최적화</li>
+                <li><strong>패러프레이징 시스템:</strong> 표절 회피 콘텐츠 변환</li>
+                <li><strong>SEO 최적화:</strong> 유튜브 알고리즘 타겟팅</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>📺 주요 콘텐츠 분야</h2>
+            <ul>
+                <li>생강-약물 상호작용 위험성</li>
+                <li>심장마비 생존 기술</li>
+                <li>만성 피로 해결법</li>
+                <li>신장 건강 교육</li>
+                <li>시니어 가족 소통 전략</li>
+                <li>요양시설 옹호 스토리</li>
+                <li>난방비 절약 콘텐츠</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>🎬 제작 프로세스</h2>
+            <p><strong>1단계:</strong> 건강 주제 리서치 및 벤치마킹</p>
+            <p><strong>2단계:</strong> 12,000자+ 스크립트 최적화 (감정 훅 + 의학 정보)</p>
+            <p><strong>3단계:</strong> AI 음성 합성 (시니어 청취 맞춤형)</p>
+            <p><strong>4단계:</strong> 배치 이미지 생성 및 영상 편집</p>
+            <p><strong>5단계:</strong> SEO 최적화 및 썸네일 제작</p>
+            <p><strong>6단계:</strong> 유튜브 업로드 및 성과 분석</p>
+        </div>
+        
+        <div class="card">
+            <h2>🎯 차별화 포인트</h2>
+            <div class="highlight">
+                <ul>
+                    <li>한국 드라마 스토리텔링 기법 활용</li>
+                    <li>시니어 문화 선호도 반영 (권위자 존중)</li>
+                    <li>감정 공감 + 실용 정보 균형</li>
+                    <li>AI 자동화로 고효율 제작 시스템 구축</li>
+                    <li>체계적인 워크플로우 문서화</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
