@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영상 갤러리</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 비율 */
+            background: #000;
+        }
+        
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .video-info {
+            padding: 20px;
+        }
+        
+        .video-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .video-title {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .video-description {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #5568d3;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📹 영상 갤러리</h1>
+            <p>최신 영상 모음</p>
+        </div>
+        
+        <div class="video-grid">
+            <!-- 영상 1 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="a.mp4" type="video/mp4">
+                        브라우저가 비디오 태그를 지원하지 않습니다.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-number">영상 #1</span>
+                    <h2 class="video-title">강아지 인터뷰</h2>
+                    <p class="video-description">귀여운 강아지와의 특별한 인터뷰 영상입니다.</p>
+                    <a href="a.mp4" download class="download-btn">📥 다운로드</a>
+                </div>
+            </div>
+            
+            <!-- 영상 2 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="b.mp4" type="video/mp4">
+                        브라우저가 비디오 태그를 지원하지 않습니다.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-number">영상 #2</span>
+                    <h2 class="video-title">영상 제목 2</h2>
+                    <p class="video-description">두 번째 영상에 대한 설명을 입력하세요.</p>
+                    <a href="b.mp4" download class="download-btn">📥 다운로드</a>
+                </div>
+            </div>
+            
+            <!-- 영상 3 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="c.mp4" type="video/mp4">
+                        브라우저가 비디오 태그를 지원하지 않습니다.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-number">영상 #3</span>
+                    <h2 class="video-title">영상 제목 3</h2>
+                    <p class="video-description">세 번째 영상에 대한 설명을 입력하세요.</p>
+                    <a href="c.mp4" download class="download-btn">📥 다운로드</a>
+                </div>
+            </div>
+            
+            <!-- 영상 4 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="d.mp4" type="video/mp4">
+                        브라우저가 비디오 태그를 지원하지 않습니다.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-number">영상 #4</span>
+                    <h2 class="video-title">영상 제목 4</h2>
+                    <p class="video-description">네 번째 영상에 대한 설명을 입력하세요.</p>
+                    <a href="d.mp4" download class="download-btn">📥 다운로드</a>
+                </div>
+            </div>
+            
+            <!-- 영상 5 -->
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <video controls>
+                        <source src="e.mp4" type="video/mp4">
+                        브라우저가 비디오 태그를 지원하지 않습니다.
+                    </video>
+                </div>
+                <div class="video-info">
+                    <span class="video-number">영상 #5</span>
+                    <h2 class="video-title">영상 제목 5</h2>
+                    <p class="video-description">다섯 번째 영상에 대한 설명을 입력하세요.</p>
+                    <a href="e.mp4" download class="download-btn">📥 다운로드</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
